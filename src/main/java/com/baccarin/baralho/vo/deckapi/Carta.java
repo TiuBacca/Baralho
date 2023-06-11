@@ -1,4 +1,7 @@
-package com.baccarin.baralho.domain;
+package com.baccarin.baralho.vo.deckapi;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -42,5 +45,13 @@ public class Carta {
 
 		return valor;
 	}
+	
+	
+    public static String formatarParaSalvarJogo(List<Carta> cartas) {
+        return cartas.stream()
+                .map(Carta::getValue)
+                .collect(Collectors.joining(", "));
+    }
+	
 
 }

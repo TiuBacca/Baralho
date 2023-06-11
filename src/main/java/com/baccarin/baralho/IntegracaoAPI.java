@@ -11,7 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.baccarin.baralho.vo.response.DeckCartaResponse;
+import com.baccarin.baralho.vo.deckapi.Baralho;
+import com.baccarin.baralho.vo.deckapi.DeckCartaResponse;
 
 import lombok.RequiredArgsConstructor;
 

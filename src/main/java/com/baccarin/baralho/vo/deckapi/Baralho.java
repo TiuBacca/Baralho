@@ -1,4 +1,4 @@
-package com.baccarin.baralho;
+package com.baccarin.baralho.vo.deckapi;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

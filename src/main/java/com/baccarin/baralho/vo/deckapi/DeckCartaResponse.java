@@ -1,9 +1,7 @@
-package com.baccarin.baralho.vo.response;
+package com.baccarin.baralho.vo.deckapi;
 
 import java.util.List;
 import java.util.StringJoiner;
-
-import com.baccarin.baralho.domain.Carta;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
