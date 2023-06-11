@@ -1,4 +1,4 @@
-package com.baccarin.baralho;
+package com.baccarin.baralho.integracao;
 
 import java.util.Collections;
 

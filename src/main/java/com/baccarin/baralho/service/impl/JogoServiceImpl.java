@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.baccarin.baralho.IntegracaoAPI;
 import com.baccarin.baralho.domain.Jogo;
 import com.baccarin.baralho.enums.StatusJogo;
+import com.baccarin.baralho.integracao.IntegracaoAPI;
 import com.baccarin.baralho.repository.JogoRepository;
 import com.baccarin.baralho.service.JogoService;
 import com.baccarin.baralho.vo.deckapi.Baralho;
