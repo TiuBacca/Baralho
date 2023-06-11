@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="baralho-dml_1.0_01"
+		author="guilherme.baccarin">
+		<preConditions onFail="MARK_RAN" onError="MARK_RAN">
+
+			<sqlCheck expectedResult="0">
+				SELECT count(*)
+				FROM pg_database
+				WHERE datistemplate = false and datname like 'baralho';
+			</sqlCheck>
+
+		</preConditions>
+		<comment> Criando database baralho </comment>
+		<sql>
+			create database baralho;
+
+		</sql>
+		<rollback> DROP database baralho </rollback>
+	</changeSet>
+
+
+	<changeSet id="baralho-dml_1.0_02"
+		author="guilherme.baccarin">
+		<preConditions onFail="MARK_RAN" onError="MARK_RAN">
+
+			<sqlCheck expectedResult="0">
+				SELECT count(*)
+				FROM
+				information_schema.schemata
+				WHERE schema_name = 'baralho';
+			</sqlCheck>
+
+		</preConditions>
+		<comment> Criando schema baralho </comment>
+		<sql>
+			create schema baralho;
+
+		</sql>
+		<rollback> DROP schema baralho </rollback>
+	</changeSet>
+
+
+</databaseChangeLog>
